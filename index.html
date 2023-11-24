@@ -44,7 +44,7 @@
   <div class="hero_area">
     <!-- header section strats -->
     <!-- Menu Bar -->
-    <header class="header">
+    <header class="header" id="nav">
       <a href="#" class="logo">LOGO</a>
 
       <input type="checkbox" id="check">
@@ -1264,6 +1264,7 @@
   <!-- End Google Map -->
 
   <script>
+    // Parallax inicial
     var headerBg = document.getElementById('bg');
     window.addEventListener('scroll', function () {
       headerBg.style.opacity = 1 - +window.pageYOffset / 550 + '';
@@ -1286,6 +1287,18 @@
       })
     });
 
+    // Ocultar barra de menu con scroll hacia abajo
+    let ubicacionPrincipal = window.pageYOffset;
+    window.onscroll = function () {
+      let Desplazamiento_Actual = window.pageYOffset;
+      if (ubicacionPrincipal >= Desplazamiento_Actual) {
+        document.getElementById('nav').style.top = '0';
+      }
+      else {
+        document.getElementById('nav').style.top = '-100px';
+      }
+      ubicacionPrincipal = Desplazamiento_Actual;
+    }
   </script>
 
 </body>
