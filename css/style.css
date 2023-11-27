@@ -118,6 +118,7 @@ a:focus {
   height: 100%;
   background: url(../images/entradaGali_bg.jpg);
   /* background-size: 100%; */
+  z-index: -10;
 }
 
 .sub_page .hero_area {
@@ -152,6 +153,7 @@ a:focus {
 }
 
 /*end header section*/
+
 /* slider section */
 .slider_section .detail-box-landing {
   color: #ffffff;
@@ -447,7 +449,11 @@ p,
   justify-content: space-between;
 }
 
-.food_section .box .options a {
+.options {
+  justify-content: center !important;
+}
+
+/* .food_section .box .options a {
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -467,7 +473,7 @@ p,
   width: 18px;
   height: auto;
   fill: #ffffff;
-}
+} */
 
 .food_section .box:hover .img-box img {
   -webkit-transform: scale(1.1);
